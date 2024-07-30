@@ -55,12 +55,13 @@ function App() {
           <Loading />
         </div>
       ) : (
+        <>
         <ul className=" flex flex-wrap justify-center">
           {user.length > 0 &&
             user.map((user) => {
               return (
                 <li
-                  className="flex flex-col max-w-56  bg-violet-50 rounded drop-shadow-md m-[2%] p-[1%]"
+                  className="flex flex-col max-w-56 bg-violet-50 rounded drop-shadow-md m-[2%] p-[1%] border-indigo-200 border-2"
                   key={user.id}
                 >
                   <Card
@@ -74,6 +75,7 @@ function App() {
               );
             })}
         </ul>
+        </>
       )}
     </div>
   );
